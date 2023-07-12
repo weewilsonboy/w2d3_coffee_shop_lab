@@ -16,3 +16,7 @@ class TestCoffeeShop(unittest.TestCase):
     def test_coffee_shop_increase_till(self):
         self.coffee_shop.increase_till(2.5)
         self.assertEqual(102.5, self.coffee_shop.till)
+
+    def test_coffee_shop_decrease_till(self):
+        self.coffee_shop.decrease_till(10)
+        self.assertEqual(90, self.coffee_shop.till)
