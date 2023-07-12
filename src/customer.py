@@ -6,5 +6,6 @@ class Customer:
     def wallet_reduce(self, amount):
         self.wallet -= amount
 
-
+    def buy(self):
+        pass
 

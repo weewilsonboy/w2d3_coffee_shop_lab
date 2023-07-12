@@ -1,5 +1,6 @@
 import unittest
 from src.coffee_shop import CoffeeShop
+from src.drink import Drink
 
 class TestCoffeeShop(unittest.TestCase):
     def setUp(self):
@@ -21,4 +22,9 @@ class TestCoffeeShop(unittest.TestCase):
         self.coffee_shop.decrease_till(10)
         self.assertEqual(90, self.coffee_shop.till)
 
+    def test_add_drink(self):
+        self.coffee_shop.add_drink("Mocha", 5)
+        expected = Drink("Mocha",5)
+        actual = self.coffee_shop.drinks_menu[0].name
+        self.assertEqual(expected.name, actual)
     
