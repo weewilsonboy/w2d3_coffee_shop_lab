@@ -24,3 +24,8 @@ class CoffeeShop:
 			self.drinks_stock[drink_name] = 1
 		else:
 			self.drinks_stock[drink_name] += 1
+
+	def sell_drink(self, drink_name):
+		drink = [drink for drink in self.drinks_menu if drink_name == drink.name][0]
+		self.decrease_till(drink.return_price())
+		return drink

@@ -27,4 +27,9 @@ class TestCoffeeShop(unittest.TestCase):
         expected = Drink("Mocha",5)
         actual = self.coffee_shop.drinks_menu[0].name
         self.assertEqual(expected.name, actual)
+        self.assertEqual(1, self.coffee_shop.drinks_stock["Mocha"])
+        self.coffee_shop.add_drink("Mocha", 5)
+        self.assertEqual(2, self.coffee_shop.drinks_stock["Mocha"])
+
+
     
