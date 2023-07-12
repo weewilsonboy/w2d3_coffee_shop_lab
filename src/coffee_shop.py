@@ -8,4 +8,7 @@ class CoffeeShop:
 		self.till += amount
 
 	def decrease_till(self, amount):
-		self.till -= amount
+		if amount < self.till:
+			self.till -= amount
+		else:
+			print("Not enough money in till")
